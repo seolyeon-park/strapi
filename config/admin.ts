@@ -10,6 +10,9 @@ export default ({ env }) => ({
       salt: env('TRANSFER_TOKEN_SALT'),
     },
   },
+  watchIgnoreFiles: [
+    '**/config/sync/**',
+  ],
   secrets: {
     encryptionKey: env('ENCRYPTION_KEY'),
   },
