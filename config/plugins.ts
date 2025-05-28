@@ -9,6 +9,12 @@ export default ({ env }) => ({
         directory: '',
         options: {
           cacheControl: '3600',
+          transform: (url) => {
+            if (url.startsWith('http')) {
+              return url;
+            }
+            return `https://nnkoadjsfgkmivkuyfbv.supabase.co/storage/v1/object/public/s-strapi/${url}`;
+          }
         },
       },
     },
