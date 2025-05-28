@@ -12,6 +12,16 @@ export default ({ env }) => ({
       ssl: {
         rejectUnauthorized: false
       },
+      pool: {
+        min: 0,
+        max: 10,
+        idleTimeoutMillis: 30000,
+        createTimeoutMillis: 30000,
+        acquireTimeoutMillis: 30000,
+        propagateCreateError: false
+      },
+      keepAlive: true,
+      keepAliveInitialDelayMillis: 10000
     },
     acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
   },
