@@ -1,12 +1,15 @@
 export default ({ env }) => ({
   upload: {
     config: {
-      provider: 'cloudinary',
+      provider: 'strapi-provider-upload-supabase',
       providerOptions: {
-        cloud_name: env('CLOUDINARY_NAME'),
-        api_key: env('CLOUDINARY_KEY'),
-        api_secret: env('CLOUDINARY_SECRET'),
-        secure: true
+        apiUrl: 'https://nnkoadjsfgkmivkuyfbv.supabase.co',
+        apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ua29hZGpzZmdrbWl2a3V5ZmJ2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0ODM5OTU3NSwiZXhwIjoyMDYzOTc1NTc1fQ.KhGXT8L7U_N7Q_NlPXj7IT2AXHxFVpAgmq3NSURKU84',
+        bucket: 's-strapi',
+        directory: '',
+        options: {
+          cacheControl: '3600',
+        },
       },
     },
   },
