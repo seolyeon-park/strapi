@@ -31,6 +31,7 @@ export default ({ env }) => [
       ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       keepHeaderOnError: true,
+      maxAge: 86400, // 24시간 캐시
     },
   },
   'strapi::poweredBy',
@@ -39,11 +40,11 @@ export default ({ env }) => [
   {
     name: 'strapi::body',
     config: {
-      jsonLimit: '10mb',
-      formLimit: '10mb',
-      textLimit: '10mb',
+      jsonLimit: '5mb',
+      formLimit: '5mb',
+      textLimit: '5mb',
       formidable: {
-        maxFileSize: 10 * 1024 * 1024, // 10MB
+        maxFileSize: 5 * 1024 * 1024, // 5MB
       },
     },
   },
