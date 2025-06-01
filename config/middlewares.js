@@ -41,7 +41,14 @@ module.exports = [
   {
     name: 'strapi::public',
     config: {
-      maxAge: 60000, // 1분 캐시
+      maxAge: 604800000, // 1주일 캐시 (7 * 24 * 60 * 60 * 1000)
+    },
+  },
+  {
+    name: 'strapi::compression',
+    config: {
+      enabled: true,
+      level: 6, // 압축 레벨 (1-9, 9가 가장 높은 압축률)
     },
   },
 ]; 
