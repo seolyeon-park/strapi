@@ -20,7 +20,7 @@ export default ({ env }) => [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['https://sanchoiworks.github.io', 'http://localhost:3000'],
+      origin: ['https://sanchoiworks.github.io', 'http://localhost:3000', 'http://127.0.0.1:5500'],
       headers: [
         'Content-Type',
         'Authorization',
