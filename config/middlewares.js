@@ -18,7 +18,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:8000', 'https://strapi-production-af72.up.railway.app'],
+      origin: ['http://localhost:8000', 'https://strapi-production-af72.up.railway.app', '*'],
       headers: [
         'Content-Type',
         'Authorization',
