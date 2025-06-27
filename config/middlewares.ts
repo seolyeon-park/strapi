@@ -7,8 +7,8 @@ export default ({ env }) => [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'https://nnkoadjsfgkmivkuyfbv.supabase.co'],
-          'media-src': ["'self'", 'data:', 'blob:', 'https://nnkoadjsfgkmivkuyfbv.supabase.co'],
+          'img-src': ["'self'", 'data:', 'blob:', env('SUPABASE_URL')],
+          'media-src': ["'self'", 'data:', 'blob:', env('SUPABASE_URL')],
           'default-src': ["'self'"],
           'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
           'style-src': ["'self'", "'unsafe-inline'"],
